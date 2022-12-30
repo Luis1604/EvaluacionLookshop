@@ -13,7 +13,7 @@
                 class="" style="height: 150px;">
             <hr>
             </div>
-            <h3 class="alert alert-light rounded-pill" style="text-align:center" >Login</h3>
+            <h3 class="alert alert-light rounded-pill" style="text-align:center" >Iniciar Sesion</h3>
             <form action="/login" method="POST">
                 
                 {% csrf_token %}
@@ -34,20 +34,14 @@
 
                 <!-- password -->
                 <div class="form-group">
-                    <label for="">Password</label>
+                    <label for="">Contraseña</label>
                     <input type="password" 
                     name="password" 
                     id=""
                      class="form-control form-control-sm" >
                 </div>
-
-                <!--Checkme button-->
-            <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
-                </div>
                 <hr>
-                <button type="submit" class="btn btn-sm btn-success col-lg-12">Login</button>
+                <button type="submit" class="btn btn-sm btn-success col-lg-12">Iniciar sesion</button>
 
 
                 
