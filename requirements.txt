@@ -1,14 +1,32 @@
 appdirs==1.4.4
+<<<<<<< HEAD
 asgiref==3.3.1
 astroid==2.5.3
 colorama==0.4.4
 distlib==0.3.1
 Django==3.1.7
+=======
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+asgiref==3.3.1
+astroid==2.5.3
+cffi==1.15.1
+colorama==0.4.4
+distlib==0.3.1
+Django==3.1.7
+django-environ==0.9.0
+>>>>>>> 1cb3347 (Parcheo1S)
 filelock==3.0.12
 isort==5.8.0
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
 Pillow==8.2.0
+<<<<<<< HEAD
+=======
+psycopg2==2.9.5
+psycopg2-binary==2.9.5
+pycparser==2.21
+>>>>>>> 1cb3347 (Parcheo1S)
 pylint==2.7.4
 pytz==2021.1
 six==1.15.0

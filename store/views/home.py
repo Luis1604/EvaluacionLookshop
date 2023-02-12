@@ -3,8 +3,11 @@ from store.models.product import Products
 from store.models.category import Category
 from django.views import View
 
+<<<<<<< HEAD
 
 # Create your views here.
+=======
+>>>>>>> 1cb3347 (Parcheo1S)
 class Index(View):
 
     def post(self , request):

@@ -1,8 +1,19 @@
 from pathlib import Path
+<<<<<<< HEAD
+=======
+import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
+
+ENVIRONMENT = env
+>>>>>>> 1cb3347 (Parcheo1S)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -16,6 +27,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['*','https://lookshop.onrender.com']
 
 
+=======
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = 'RENDER' not in os.environ
+
+ALLOWED_HOSTS = ['*','https://lookshop.onrender.com']
+
+>>>>>>> 1cb3347 (Parcheo1S)
 # Application definition
 
 INSTALLED_APPS = [
@@ -25,9 +43,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'store'
 ]
 
+=======
+    'LookShop',
+    'store',
+]
+
+
+>>>>>>> 1cb3347 (Parcheo1S)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -38,6 +64,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1cb3347 (Parcheo1S)
 SESSION_COOKIE_SECURE = True
 CSRR_Cookie_secure = True
 SECURE_BROWSER_XSS_FILTER = True
@@ -47,6 +77,12 @@ SECURE_HSTS_SECONDS = 31536000
 SECURE_REDIRECT_EXEMPT = []
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 15316db (version1Parcheo)
+>>>>>>> 1cb3347 (Parcheo1S)
 ROOT_URLCONF = 'LookShop.urls'
 
 TEMPLATES = [
@@ -90,9 +126,38 @@ DATABASES = {
    }
 }
 
+<<<<<<< HEAD
 #
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
+=======
+<<<<<<< HEAD
+=======
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bdpost',
+        'USER': 'admin',
+        'PASSWORD': 'gXndp6wYWogbMBAfj1Hk2DPhMbs5VsaB',
+        'HOST': 'dpg-ceigvtkgqg4dlfbh1ip0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
+}
+"""
+"""
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.ScryptPasswordHasher',
+]
+"""
+>>>>>>> 15316db (version1Parcheo)
+#
+# Password validation
+>>>>>>> 1cb3347 (Parcheo1S)
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -129,5 +194,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 MEDIA_URL = "/image/download/"
 MEDIA_ROOT = BASE_DIR
+=======
+MEDIA_ROOT = os.path.join(BASE_DIR, '/image/download/')
+MEDIA_URL = "/image/download/"
+if not DEBUG:
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+
+>>>>>>> 1cb3347 (Parcheo1S)

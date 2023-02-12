@@ -1,8 +1,15 @@
 from django.shortcuts import render, redirect
+<<<<<<< HEAD
 from django.contrib.auth.hashers import make_password
 from store.models.customer import Customer
 from django.views import View
 
+=======
+from django.contrib.auth.hashers import make_password, check_password
+from store.models.customer import Customer
+from django.views import View
+import re
+>>>>>>> 1cb3347 (Parcheo1S)
 
 class Signup (View):
     def get(self, request):
@@ -15,7 +22,11 @@ class Signup (View):
         phone = postData.get ('phone')
         email = postData.get ('email')
         password = postData.get ('password')
+<<<<<<< HEAD
         # validation
+=======
+        # validación
+>>>>>>> 1cb3347 (Parcheo1S)
         value = {
             'first_name': first_name,
             'last_name': last_name,
@@ -46,6 +57,7 @@ class Signup (View):
     def validateCustomer(self, customer):
         error_message = None
         if (not customer.first_name):
+<<<<<<< HEAD
             error_message = "Please Enter your First Name !!"
         elif len (customer.first_name) < 3:
             error_message = 'First Name must be 3 char long or more'
@@ -66,3 +78,32 @@ class Signup (View):
         # saving
 
         return error_message
+=======
+            error_message = "Por favor, introduzca su primer nombre!!"
+        elif len (customer.first_name) < 3:
+            error_message = 'El nombre debe tener 3 caracteres o más'
+        elif not customer.last_name:
+            error_message = 'Por favor, introduzca su apellido'
+        elif len (customer.last_name) < 3:
+            error_message = 'El apellido debe tener 3 caracteres o más'
+        elif not customer.phone:
+            error_message = 'Ingrese su número de celular'
+        elif len (customer.phone) < 10:
+            error_message = 'El número de teléfono debe tener 10 caracteres'
+        elif len (customer.password) < 8:
+            error_message = 'La contraseña debe tener 8 caracteres'
+        elif not re.search('[a-z]', customer.password) and re.search('[A-Z]', customer.password):
+            error_message = 'no contiene letas'
+        elif not re.search('[0-9]', customer.password):
+            error_message = 'No contiene numeros'
+        elif not re.search('[$@#]', customer.password):
+            error_message = 'No contiene caracteres'
+        elif len (customer.email) < 5:
+            error_message = 'El correo electrónico debe tener mas de 5 caracteres'
+        elif customer.isExists ():
+            error_message = 'Cuenta de correo ya existe..'
+        # saving
+
+        return error_message
+        
+>>>>>>> 1cb3347 (Parcheo1S)

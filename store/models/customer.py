@@ -7,7 +7,10 @@ class Customer(models.Model):
     email=models.EmailField()
     password = models.CharField(max_length=100)
 
+<<<<<<< HEAD
     #to save the data
+=======
+>>>>>>> 1cb3347 (Parcheo1S)
     def register(self):
         self.save()
 

@@ -12,11 +12,18 @@ class AdminProduct(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name']
 
+<<<<<<< HEAD
 # Register your models here.
+=======
+>>>>>>> 1cb3347 (Parcheo1S)
 admin.site.register(Products,AdminProduct)
 admin.site.register(Category)
 admin.site.register(Customer)
 admin.site.register(Order)
 
 
+<<<<<<< HEAD
 # username = Tanushree, email = tanushree7252@gmail.com, password = 1234
+=======
+
+>>>>>>> 1cb3347 (Parcheo1S)
